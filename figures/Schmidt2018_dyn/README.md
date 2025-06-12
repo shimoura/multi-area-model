@@ -2,13 +2,14 @@
 
 [![www.python.org](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org) <a href="http://www.nest-simulator.org"> <img src="https://raw.githubusercontent.com/nest/nest-simulator/master/extras/logos/nest-simulated.png" alt="NEST simulated" width="50"/></a> [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-This folder contains the scripts to reproduce all figures of Schmidt M, Bakker R, Shen K, Bezgin B, Diesmann M & van Albada SJ (2018) A multi-scale layer-resolved spiking network model of resting-state dynamics in macaque cortex. (under review)
+This folder contains the scripts to reproduce all figures of the following publication: 
+- Schmidt M, Bakker R, Shen K, Bezgin B, Diesmann M & van Albada SJ (2018) A multi-scale layer-resolved spiking network model of resting-state dynamics in macaque cortex. PLOS Computational Biology, 14(9): e1006359. https://doi.org/10.1371/journal.pcbi.1006359
 
 The figure scripts are named according to their ordering in the paper. To execute them, you can choose to either work with newly simulated data or the original data used in the publication. 
 
 ### Original simulation data
 
-You can retrieve the original data from our data repository: [https://web.gin.g-node.org/maximilian.schmidt/multi-area-model-data](https://web.gin.g-node.org/maximilian.schmidt/multi-area-model-data). By default, all plot scripts are configured to use the old data (`LOAD_ORIGINAL_DATA = True` in all scripts). You have to download the data and then define the variable `original_data_path` in `config.py`. 
+You can retrieve the original data from our data repository: [https://web.gin.g-node.org/maximilian.schmidt/multi-area-model-data](https://web.gin.g-node.org/maximilian.schmidt/multi-area-model-data). By default, all plot scripts are configured to use the old data (`LOAD_ORIGINAL_DATA = True` in all scripts). You have to download the data and then define the variable `original_data_path` in `helpers.py`. 
 
 ### Creating new simulation data
 

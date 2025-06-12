@@ -14,7 +14,7 @@ from plotcolors import myred, myblue
 from multiarea_model import MultiAreaModel
 from multiarea_model.multiarea_helpers import create_mask
 
-NEURON_DENSITIES_AVAILABLE = False
+NEURON_DENSITIES_AVAILABLE = True
 
 if NEURON_DENSITIES_AVAILABLE:
     """
@@ -84,10 +84,10 @@ if NEURON_DENSITIES_AVAILABLE:
     target = np.array(data[:, 1], dtype=str)
     source = np.array(data[:, 2], dtype=str)
 
-    x = np.array(data[:, 7], dtype=np.float)
-    TOT = np.array(data[:, 5], dtype=np.float)
+    x = np.array(data[:, 7], dtype=float)
+    TOT = np.array(data[:, 5], dtype=float)
 
-    S = np.array(data[:, 3], dtype=np.float)
+    S = np.array(data[:, 3], dtype=float)
     I = TOT - S
 
     with open(os.path.join(datapath, 'viscortex_processed_data.json'), 'r') as f:
@@ -139,8 +139,8 @@ if NEURON_DENSITIES_AVAILABLE:
     """
     Fit of SLN vs. architectural type differences
     """
-    SLN_array = np.array(data[:, 10], dtype=np.float)
-    densities = np.array(data[:, 7], dtype=np.float)
+    SLN_array = np.array(data[:, 10], dtype=float)
+    densities = np.array(data[:, 7], dtype=float)
 
     # Call R script to perform SLN fit
     try:

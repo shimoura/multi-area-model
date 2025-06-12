@@ -8,7 +8,7 @@ from plotfuncs import create_fig
 from scipy import stats
 colors = [myblue2, myblue,  myyellow, myred2, myred]
 
-NEURON_DENSITIES_AVAILABLE = False
+NEURON_DENSITIES_AVAILABLE = True
 
 if NEURON_DENSITIES_AVAILABLE:
     with open(os.path.join(datapath, 'viscortex_processed_data.json'), 'r') as f:

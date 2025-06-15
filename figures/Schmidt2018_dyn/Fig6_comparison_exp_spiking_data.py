@@ -105,7 +105,7 @@ phase_labels = {'low_fluct': 'exp, low fluct.',
 exp_data = {'spectrogram': [np.load(os.path.join(chu2014_path, 'Analysis', 'spectrogram_freq.npy')),
                             np.load(os.path.join(chu2014_path, 'Analysis', 'spectrogram_time.npy')),
                             np.load(os.path.join(chu2014_path, 'Analysis', 'spectrogram_Sxx.npy'))],
-            'spike_data': np.load(os.path.join(chu2014_path, 'Analysis', 'spike_data_1mm.npy')),
+            'spike_data': np.load(os.path.join(chu2014_path, 'Analysis', 'spike_data_1mm.npy'), allow_pickle=True),
             'neuron_depths': np.load(os.path.join(chu2014_path, 'Analysis', 'neuron_depths.npy')),
             'power_spectra': {'f': np.load(os.path.join(chu2014_path, 'Analysis',
                                                         'power_spectrum_freq.npy')),
@@ -199,7 +199,7 @@ for i, chi in enumerate(chi_list):
             label=r'sim, $\chi = $' + str(chi))
 
 sim_colors = [myred, myblue, 'k']
-ax.set_yscale('Log')
+ax.set_yscale('log')
 ax.set_xlim((-10., 60.))
 # ax.set_ylim((1e4, 7.e6))
 ax.set_xlabel('Frequency (Hz)')
@@ -236,7 +236,7 @@ power = power_spectra['1.9_long']['power']
 ax.plot(f[ind], power[ind], color='k', label=r'sim., $\chi=1.9$')
 ax_inset.plot(f[ind_inset], power[ind_inset], color='k', label=r'sim., $\chi=1.9$')
 
-ax.set_yscale('Log')
+ax.set_yscale('log')
 ax.set_xlim((-10., 60.))
 ax.set_xlabel('Frequency (Hz)')
 ax.set_xticks([0., 20., 40.])
@@ -253,14 +253,13 @@ ax.add_patch(
 ax.arrow(5.5, 2e0, 10., 0.5, transform=ax.transData,
          head_width=0.5, head_length=2., fc='k', ec='k')
 
-ax_inset.set_yscale('Log')
+ax_inset.set_yscale('log')
 ax_inset.set_xlim((-0.5, 5.))
 ax_inset.set_xticks([0., 2.5, 5.])
 ax_inset.spines['right'].set_color('none')
 ax_inset.spines['top'].set_color('none')
 ax_inset.yaxis.set_ticks_position("left")
 ax_inset.xaxis.set_ticks_position("bottom")
-
 
 """
 Spike rate distributions

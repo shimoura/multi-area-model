@@ -61,18 +61,18 @@ for i, id in enumerate(data_pvc5['ids']):
 
 np.save(os.path.join(save_path,
                      'spike_data_1mm.npy'),
-        np.array(data_pvc5['times'])[ind_mm])
+        np.array(data_pvc5['times'], dtype=object)[ind_mm])
 
 np.save(os.path.join(save_path,
                      'neuron_depths.npy'),
         np.array(neuron_depths)[ind_mm])
 
-t_min = np.min([np.min(x) for x in np.array(data_pvc5['times'])[ind_mm]])
-t_max = np.max([np.max(x) for x in np.array(data_pvc5['times'])[ind_mm]])
+t_min = np.min([np.min(x) for x in np.array(data_pvc5['times'], dtype=object)[ind_mm]])
+t_max = np.max([np.max(x) for x in np.array(data_pvc5['times'], dtype=object)[ind_mm]])
 
 time = np.arange(t_min, t_max + 1., 1.)
 rate_binned = np.array([np.histogram(x, time)[0] for x in
-                        np.array(data_pvc5['times'])[ind_mm]]) * 1e3
+                        np.array(data_pvc5['times'], dtype=object)[ind_mm]]) * 1e3
 time = time[:-1]
 pop_rate = np.mean(rate_binned, axis=0)
 

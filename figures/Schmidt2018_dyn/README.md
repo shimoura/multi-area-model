@@ -19,7 +19,7 @@ You then have to set `LOAD_ORIGINAL_DATA = False` in the `Snakefile` and the res
 ### Experimental data
 
 Figure 6 requires the experimental data of Chu CCJ, Chien PF, Hung CP. Multi-electrode recordings of ongoing activity
-and responses to parametric stimuli in macaque V1, available in the crcns.org database. Please register on [https://www.crcns.org/](https://www.crcns.org/), download the data from [https://portal.nersc.gov/project/crcns/download/pvc-5](https://portal.nersc.gov/project/crcns/download/pvc-5), extract them into a path and then set this path in `helpers.py`.
+and responses to parametric stimuli in macaque V1, available in the crcns.org database. Please register on [https://www.crcns.org/](https://crcns.org/), download the data from [https://portal.nersc.gov/project/crcns/download/pvc-5](https://portal.nersc.gov/project/crcns/download/pvc-5), extract them into a path and then set this path in `helpers.py`.
 
 Figure 8 requires the experimental fMRI data (described by Babapoor-Farrokhran et al. (2013), see Methods section of Schmidt et al. 2018 for more details) that are contained in this repository in `Fig8_exp_func_conn.csv`.
 

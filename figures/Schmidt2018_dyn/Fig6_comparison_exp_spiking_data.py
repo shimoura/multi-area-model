@@ -144,7 +144,6 @@ cb.ax.yaxis.set_label_coords(1.4, 0.5, transform=ax.transAxes)
 
 
 ax.set_yticks(np.arange(f.size)[ind][::100])
-ax.set_yticklabels([r'$0$', r'$10$', r'$20$', r'$30$'])
 xticks = [5., 455., 905.]
 xticklocs = [np.argmin(np.abs(t - tic)) for tic in xticks]
 ax.set_xticks(xticklocs)
